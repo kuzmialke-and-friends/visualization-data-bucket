@@ -3,7 +3,7 @@ import { Middleware } from 'koa';
 
 const readJson = async (dataset: string, id: string) => {
   try {
-    const rawDataset = await fs.readFile(`datasets/${dataset}/${id}`, 'utf8');
+    const rawDataset = await fs.readFile(`assets/${dataset}/${id}`, 'utf8');
 
     return JSON.parse(rawDataset);
   } catch {
