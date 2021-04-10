@@ -9,8 +9,8 @@
     "build:watch": "npm run build -- --watch",
     "test": "jest --coverage",
     "test:watch": "npm run test -- --watch",
-    "start:service": "NODE_PATH=build node build",
-    "start": "npm run build && npm run start:service",
+    "start:production": "NODE_PATH=build node build",
+    "start": "npm run build && npm run start:production",
     "start:dev": "npm run build && nodemon --watch build --delay 1s --exec 'npm start' & npm run build:watch",
     "prepare": "husky install",
     "typecheck": "tsc --noEmit",
@@ -33,6 +33,7 @@
   },
   "homepage": "https://github.com/kuzmialke-and-friends/visualization-api#readme",
   "devDependencies": {
+    "rimraf": "^3.0.2",
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
     "@types/jest": "^26.0.21",
@@ -57,13 +58,12 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "ts-jest": "^26.5.3",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.3"
+    "ts-node": "^9.1.1"
   },
   "dependencies": {
-    "rimraf": "^3.0.2",
     "@koa/cors": "^3.1.0",
     "@koa/router": "^10.0.0",
-    "koa": "^2.13.1"
+    "koa": "^2.13.1",
+    "typescript": "^4.2.3"
   }
 }
