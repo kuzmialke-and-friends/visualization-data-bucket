@@ -1,1 +1,3 @@
-export { app } from './koaApp';
+import { startService } from './koaApp';
+
+startService();
