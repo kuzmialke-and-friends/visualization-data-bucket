@@ -5,8 +5,8 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Getting started](#getting-started)
 - [Core Concepts](#core-concepts)
+- [Getting started](#getting-started)
 - [API](#api)
 
 ## Core Concepts
