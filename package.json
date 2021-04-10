@@ -10,7 +10,7 @@
     "test": "jest --coverage",
     "test:watch": "npm run test -- --watch",
     "start:service": "NODE_PATH=build node build",
-    "start": "npm run build && npm run start",
+    "start": "npm run build && npm run start:service",
     "start:dev": "npm run build && nodemon --watch build --delay 1s --exec 'npm start' & npm run build:watch",
     "prepare": "husky install",
     "typecheck": "tsc --noEmit",
