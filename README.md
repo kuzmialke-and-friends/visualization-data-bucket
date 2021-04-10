@@ -1,6 +1,6 @@
 # Visualization Data Bucket
 
-[![Build Status](https://travis-ci.com/kuzmialke-and-friends/visualization-data-bucket.svg?branch=master)](https://travis-ci.com/kuzmialke-and-friends/visualization-data-bucket)
+[![Build Status](https://travis-ci.com/kuzmialke-and-friends/visualization-data-bucket.svg?branch=main)](https://travis-ci.com/kuzmialke-and-friends/visualization-data-bucket)
 
 [Heroku preview](https://knf-visualization-data-bucket.herokuapp.com)
 
