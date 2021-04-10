@@ -6,5 +6,5 @@ export const startService = () => {
 
   app.use(router.routes()).use(router.allowedMethods());
 
-  app.listen(process.env.SERVER_PORT);
+  app.listen(process.env.PORT);
 };
