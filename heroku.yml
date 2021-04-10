@@ -1,4 +1,4 @@
 build:
-  web: npm build
+  web: npm run build
 run:
   web: npm run start:production
