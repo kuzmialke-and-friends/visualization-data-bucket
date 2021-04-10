@@ -1,28 +1,26 @@
 import { promises as fs } from 'fs';
 import { Middleware } from 'koa';
 
-const readJson = async (id: string) => {
-  const rawDataset = await fs.readFile(`datasets/${id}`, 'utf8');
-
-  if (!rawDataset) {
-    return null;
-  }
-
+const readJson = async (dataset: string, id: string) => {
   try {
+    const rawDataset = await fs.readFile(`datasets/${dataset}/${id}`, 'utf8');
+
     return JSON.parse(rawDataset);
-  } catch { 
+  } catch {
     return null;
   }
 };
 
 export const datasetMiddleware: Middleware = async (ctx, next) => {
-  const dataset = ctx.params.id ? await readJson(ctx.params.id) : null;
+  const { dataset = '', id = '' } = ctx.params;
 
-  if (!dataset) {
+  const data = await readJson(dataset, id);
+
+  if (!data) {
     ctx.throw(404);
   }
 
   ctx.type = 'application/json';
-  ctx.body = dataset;
+  ctx.body = data;
   await next();
 };

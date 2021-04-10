@@ -3,4 +3,4 @@ import { datasetMiddleware } from './datasets/middleware';
 
 export const router = new Router();
 
-router.get('/datasets/:id', datasetMiddleware);
+router.get('/datasets/:dataset/:id', datasetMiddleware);
