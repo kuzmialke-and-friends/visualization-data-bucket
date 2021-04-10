@@ -2,25 +2,58 @@
 
 [![Build Status](https://travis-ci.com/kuzmialke-and-friends/visualization-data-bucket.svg?branch=main)](https://travis-ci.com/kuzmialke-and-friends/visualization-data-bucket)
 
-[Heroku preview](https://knf-visualization-data-bucket.herokuapp.com)
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Getting started](#getting-started)
+- [Core Concepts](#core-concepts)
+- [API](#api)
+
+## Core Concepts
 
 This repository is meant to serve as a free replacement for an S3 bucket. It is hosted on Heroku and
 serves JSON used for visualization.
 
-## Endpoints
+[Heroku preview](https://knf-visualization-data-bucket.herokuapp.com)
 
-### Datasets
+## Getting started
 
-`/datasets/:dataset/:id` - tries to read a json and return it with 200, or 404 if it fails.
+### Clone the repository and go inside it
+
+```bash
+git clone https://github.com/kuzmialke-and-friends/visualization-data-bucket
+cd visualization-data-bucket
+```
+
+### Check node&npm version and install dependencies
+
+```bash
+nvm use
+npm i
+```
+
+### Start development server
+
+```bash
+npm run start:dev
+```
+
+## API
+
+### Endpoints
+
+#### Datasets
+
+`/assets/:dataset/:id` - tries to read a json and return it with 200, or 404 if it fails.
 
 Examples:
 
 ```
-https://knf-visualization-data-bucket.herokuapp.com/datasets/biraffe/ghostStaticMap.json
-https://knf-visualization-data-bucket.herokuapp.com/datasets/biraffe/ghost.json
-https://knf-visualization-data-bucket.herokuapp.com/datasets/biraffe/jump.json
+https://knf-visualization-data-bucket.herokuapp.com/assets/biraffe/ghostStaticMap.json
+https://knf-visualization-data-bucket.herokuapp.com/assets/biraffe/ghost.json
+https://knf-visualization-data-bucket.herokuapp.com/assets/biraffe/jump.json
 ```
 
-### Health
+#### Health
 
 `/health` - health check, 200 with body `Ok`.
