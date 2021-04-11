@@ -11,7 +11,7 @@
 
 ## Core Concepts
 
-This repository is meant to serve as a free replacement for an S3 bucket. It is hosted on Heroku and
+This repository is meant to serve as a temporary replacement for a databse or an S3 bucket. It is hosted on Heroku and
 serves JSON used for visualization.
 
 [Heroku preview](https://knf-visualization-data-bucket.herokuapp.com)
